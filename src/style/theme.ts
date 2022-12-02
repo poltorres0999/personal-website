@@ -1,16 +1,16 @@
 
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 const mainTheme = createTheme({
     palette: {
         primary: {
-            main: '#6E07F3',
+            main: '#BF9A18',
             light: '#6573c3',
             dark: '#2c387e',
             contrastText: '#ffffff',
           },
           secondary: {
-            main: '#ff8c00',
+            main: '#183DBF',
             dark: '#ab003c',
             contrastText: '#ffffff',
             light: '#f73378',
