@@ -121,7 +121,7 @@ export default function PersistentDrawerRight() {
         <Divider />
         <List>
           <ListItem key={"home"} disablePadding>
-            <ListItemButton href="/homepage">
+            <ListItemButton href={`${process.env.PUBLIC_URL}/homepage`}>
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>
