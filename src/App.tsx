@@ -2,17 +2,18 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/core/layout/layout";
 import { HomePage } from "./components/pages/home/home";
+import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter basename="personal-website">
+    <HashRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
-          <Route path="/homepage" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
