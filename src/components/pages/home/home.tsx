@@ -45,7 +45,6 @@ export function HomePage() {
         sx={{
           maxWidth: "100%",
         }}
-        alt="The house from the offer."
         src="static/images/home/homepage-image-1.png"
       />
       <Box width={"100%"}>

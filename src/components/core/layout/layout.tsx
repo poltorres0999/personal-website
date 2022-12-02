@@ -20,6 +20,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { Container, Grid } from "@mui/material";
 import { Outlet } from "react-router-dom";
+import { Footer } from "./footer/footer";
 
 const drawerWidth = 240;
 
@@ -97,6 +98,7 @@ export default function PersistentDrawerRight() {
       <Main open={open}>
         <DrawerHeader />
         <Outlet />
+        <Footer></Footer>
       </Main>
       <Drawer
         sx={{
