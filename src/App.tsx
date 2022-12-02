@@ -6,11 +6,10 @@ import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter basename="personal-website">
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/" element={<HomePage />} />
+          <Route path="/homepage" element={<HomePage />} />
         </Route>
       </Routes>
     </HashRouter>
