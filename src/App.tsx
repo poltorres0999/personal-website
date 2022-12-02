@@ -6,12 +6,13 @@ import { HashRouter } from "react-router-dom";
 
 function App() {
   return (
-    <HashRouter basename="/personal-website">
+    <HashRouter basename="/">
       <Routes>
         <Route element={<Layout />}>
           {" "}
           {/* put url base here and nest children routes */}
           <Route path="/" element={<HomePage />} />
+          <Route path="/personal-website" element={<HomePage />} />
         </Route>
         {/* navigate to default route if no url matched */}
       </Routes>
