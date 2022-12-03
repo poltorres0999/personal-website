@@ -121,7 +121,7 @@ export default function PersistentDrawerRight() {
         <Divider />
         <List>
           <ListItem key={"home"} disablePadding>
-            <ListItemButton href="/personal-website/homepage">
+            <ListItemButton href="/homepage">
               <ListItemIcon>
                 <HomeIcon />
               </ListItemIcon>

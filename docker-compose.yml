@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  nginx-react:
+    container_name: personal-wesbite
+    image: personal-wesbite:dev
+    ports:
+      - 80:80
+    environment:
+      NODE_ENV: production
