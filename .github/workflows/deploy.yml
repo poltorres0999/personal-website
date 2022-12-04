@@ -1,18 +1,18 @@
-name: Deploy to remote server using Docker
+name: Deploy to remote host
 on:
   push:
     branches:
       - master
 jobs:
-  build:
+  deploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to remote docker
-        uses: wshihadeh/docker-deployment-action@v1
-        with:
-          remote_docker_host: ${{ secrets.REMOTE_HOST }}
-          ssh_private_key: ${{ secrets.SSH_KEY }}
-          ssh_public_key: ${{ secrets.PUBLIC_SSH_KEY }}
-          deployment_mode: docker-compose
-          stack_file_name: docker-compose.yml
-          args: up -d
+    - name: executing remote ssh deployment script
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.SSH_USERNAME }}
+        key: ${{ secrets.SSH_KEY }}
+        port: ${{ secrets.PORT }}
+        script: git clone https://github.com/poltorres0999/personal-website && sh run.sh
