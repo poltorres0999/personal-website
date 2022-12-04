@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         key: ${{ secrets.SSH_KEY }}
         port: ${{ secrets.PORT }}
-        script: git clone https://github.com/poltorres0999/personal-website && sh run.sh
+        script: git clone https://github.com/poltorres0999/personal-website && cd personal-website && sh run.sh
