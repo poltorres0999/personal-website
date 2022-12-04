@@ -1,6 +1,7 @@
-name: Deploy personal-website
-on: push
-  branches:
+name: Deploy to remote host
+on:
+  push:
+    branches:
       - master
 jobs:
   deploy:
